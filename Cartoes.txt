@@ -1,0 +1,7 @@
+2	2	2/2/2	5/6/2015	5/7/2015	cartao3	Pessoa2	Cenas3
+1	1	11/6/2004	-1/-1/-1	1/3/2020	cartao4	Pessoa1	Cenas4
+1	1	2/2/2010	-1/-1/-1	3/3/2020	cartao1	Pessoa2	Cenas1
+6	0	2/6/2010	-1/-1/-1	-1/-1/-1	cartao7	nenhum	cenas7
+6	0	12/12/2012	-1/-1/-1	-1/-1/-1	cartao5	nenhum	Cenas5
+2	0	10/2/2016	-1/-1/-1	-1/-1/-1	cartao2	nenhum	Cenas2
+10	0	27/8/2018	-1/-1/-1	-1/-1/-1	cartao8	nenhum	cenas8
