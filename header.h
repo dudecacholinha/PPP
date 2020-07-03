@@ -78,7 +78,7 @@ void le_data(Data *a,int flag){/*falg a 0 data de ciracao*/
     }
     }while(data_existe(*a)==0);
     }
-void le_data_2(Data *a,int flag,Data b){/*falg a 0 data de ciracao o b e a criaçao*/
+void le_data_2(Data *a,int flag,Data b){/*falg a 0 data de ciracao o b e a criaÃ§ao*/
     do{
     if(flag==0){
         printf("Data de criaca?:");
@@ -234,7 +234,7 @@ List_ponteiros cria_lista_ponteiros (void)
     return aux;
 }
 void procura_lista (List_pessoa lista, char* chave, List_pessoa *ant, List_pessoa *actual)
-{/*pequeno senao no while que seria se tivem nomes iaguais secalahr meter mais uma condiçao usando o id*/
+{/*pequeno senao no while que seria se tivem nomes iaguais secalahr meter mais uma condiÃ§ao usando o id*/
     *ant = lista; *actual = lista->next;/*salta logo o header*/
     while ((*actual) != NULL&&(strcmp((*actual)->pessoa.id ,chave)!=0))
     {
@@ -243,7 +243,7 @@ void procura_lista (List_pessoa lista, char* chave, List_pessoa *ant, List_pesso
         /*printf("%s ",(*actual)->info.indetificador );porqueeeeeeeeeeeeee*/
         }
         if (((*actual) != NULL )&&(strcmp((*actual)->pessoa.id ,chave) != 0)){
-            *actual = NULL; /* Se elemento não encontrado*/
+            *actual = NULL; /* Se elemento nÃ£o encontrado*/
             }
 }
 void procura_lista_Cartao (List_cartao lista, Cartao chave, List_cartao *ant, List_cartao *actual)
@@ -257,13 +257,13 @@ void procura_lista_Cartao (List_cartao lista, Cartao chave, List_cartao *ant, Li
         }
         /*printf("%s ",(*actual)->info.indetificador );*/
         if (((*actual) != NULL )&&(compara_Data((*actual)->cartao.criacao ,chave.criacao) != 0)){
-            *actual = NULL; /* Se elemento não encontrado*/
+            *actual = NULL; /* Se elemento nÃ£o encontrado*/
             }
 }
 
 void procura_lista_Cartao_2 (List_cartao lista, char* chave, List_cartao *ant, List_cartao *actual)
 {
-    /*supoetamente devia ser tendo em conta a data ded criaçao mas e so para deserascar*/
+    /*supoetamente devia ser tendo em conta a data ded criaÃ§ao mas e so para deserascar*/
     *ant = lista; *actual = lista->next;/*salta logo o header*/
     while ((*actual) != NULL&&(strcmp((*actual)->cartao.id ,chave) !=0))
     {
@@ -273,13 +273,13 @@ void procura_lista_Cartao_2 (List_cartao lista, char* chave, List_cartao *ant, L
         }
         /*printf("%s ",(*actual)->info.indetificador );*/
         if (((*actual) != NULL )&&(strcmp((*actual)->cartao.id ,chave) != 0)){
-            *actual = NULL; /* Se elemento não encontrado*/
+            *actual = NULL; /* Se elemento nÃ£o encontrado*/
             }
 }
 
 void procura_lista_Ponteiros_2 (List_ponteiros lista, char* chave, List_ponteiros *ant, List_ponteiros *actual)
 {
-    /*supoetamente devia ser tendo em conta a data ded criaçao mas e so para deserascar*/
+    /*supoetamente devia ser tendo em conta a data ded criaÃ§ao mas e so para deserascar*/
     *ant = lista; *actual = lista->next;/*salta logo o header*/
     while ((*actual) != NULL&&(strcmp((*actual)->no_cartao->cartao.id,chave) !=0))
     {
@@ -290,7 +290,7 @@ void procura_lista_Ponteiros_2 (List_ponteiros lista, char* chave, List_ponteiro
         /*printf("%s ",(*actual)->info.indetificador );*/
         /*printf("%s",(*actual)->no_cartao->cartao.id,chave);*/
         if (((*actual) != NULL )&&(strcmp((*actual)->no_cartao->cartao.id,chave) != 0)){
-            *actual = NULL; /* Se elemento não encontrado*/
+            *actual = NULL; /* Se elemento nÃ£o encontrado*/
             }
 }
 void procura_lista_ponteiros (List_ponteiros lista, char* chave, List_ponteiros *ant, List_ponteiros*actual)
@@ -306,7 +306,7 @@ void procura_lista_ponteiros (List_ponteiros lista, char* chave, List_ponteiros 
         teste2=((*actual)->no_cartao);
         }
         if ((*actual) != NULL && (strcmp ((((*actual)->no_cartao))->cartao.id,chave) != 0))
-            *actual = NULL; /* Se elemento não encontrado*/
+            *actual = NULL; /* Se elemento nÃ£o encontrado*/
         /*printf("Anterior %s\n",(*ant)->info.indetificador);*/
 }
 List_pessoa pesquisa_lista (List_pessoa lista, char* it)
@@ -458,19 +458,19 @@ void insere_lista_ponteiros (List_ponteiros lista, List_cartao x)/*acho que tamb
 }
 
 void elemina_lista_ponteiros(List_ponteiros lista,char*ID){/*acho que vai no caracas*/
-    List_ponteiros l=lista->next;/* Salta o cabeçalho */
+    List_ponteiros l=lista->next;/* Salta o cabeÃ§alho */
     List_ponteiros ant=lista;
     while(l&&strcmp(l->no_cartao->cartao.id,ID)!=0){
         ant=l;
         l=l->next;
     }
-    /*vai sempre acontecer mas pronto (codiçao desnesserai)*/
+    /*vai sempre acontecer mas pronto (codiÃ§ao desnesserai)*/
     ant->next=l->next;
     free(l);
 }
 List_ponteiros elemina_lista_ponteiros_2(List_ponteiros lista,char*ID){
 
-    List_ponteiros l=lista->next;/* Salta o cabeçalho */
+    List_ponteiros l=lista->next;/* Salta o cabeÃ§alho */
     List_ponteiros ant=lista;
     while(l&&strcmp(l->no_cartao->cartao.id,ID)!=0){
         ant=l;
@@ -679,7 +679,7 @@ int verifica_disponivel(int *disponivel,int tamanho){
     return i;
     }
 void troca_to_do_doing(List_ponteiros to_do,List_ponteiros doing,List_cartao cartoes,List_pessoa pessoas,int max_tarefas,int max_tarefas_doing){
-    /*isto secalahr tem de mudar a escolha das pessoas para o id delas mesmo em vez do numero da posiçao*/
+    /*isto secalahr tem de mudar a escolha das pessoas para o id delas mesmo em vez do numero da posiÃ§ao*/
     char *cartao;
     int *disponivel;
     int i,tamanho;
@@ -738,7 +738,7 @@ List_cartao get_cartao(List_ponteiros lista){
 
     }
 void troca_doing_to_do(List_ponteiros to_do,List_ponteiros doing,List_cartao cartoes,List_pessoa pessoas){
-    /*isto secalahr tem de mudar a escolha das pessoas para o id delas mesmo em vez do numero da posiçao*/
+    /*isto secalahr tem de mudar a escolha das pessoas para o id delas mesmo em vez do numero da posiÃ§ao*/
     char *cartao;
     List_ponteiros aux;/*aux4 e so para ajudar a ver se o cartao existe*/
     List_cartao aux2;/*cartao*/
@@ -1020,7 +1020,7 @@ void imprime_lista_cartoes (List_cartao lista)
     while (l)
 {
         aux=l->cartao;
-        printf("id:%s \nid do dono:%s \ndiscricao: %s \nprioridade:%d\nSeccao:%d\nData de criaçao:%d/%d/%d\nData de conclusao:%d/%d/%d\nData do prazo%d/%d/%d\n",aux.id,aux.dono,aux.descricao,aux.prioridade,aux.seccao,aux.criacao.dia,aux.criacao.mes,aux.criacao.ano,aux.conclusao.dia,aux.conclusao.mes,aux.conclusao.ano,aux.prazo.dia,aux.prazo.mes,aux.prazo.ano);
+        printf("id:%s \nid do dono:%s \ndiscricao: %s \nprioridade:%d\nSeccao:%d\nData de criaÃ§ao:%d/%d/%d\nData de conclusao:%d/%d/%d\nData do prazo%d/%d/%d\n",aux.id,aux.dono,aux.descricao,aux.prioridade,aux.seccao,aux.criacao.dia,aux.criacao.mes,aux.criacao.ano,aux.conclusao.dia,aux.conclusao.mes,aux.conclusao.ano,aux.prazo.dia,aux.prazo.mes,aux.prazo.ano);
         l=l->next;
         printf("\n");
 }
@@ -1037,7 +1037,7 @@ void imprime_lista_cartoes_ficheiro(List_cartao lista,char*nome)
     while (l)
 {
         aux=l->cartao;
-        fprintf(fp,"id:%s \nid do dono:%s \ndiscricao: %s \nprioridade:%d\nSeccao:%d\nData de criaçao:%d/%d/%d\nData de conclusao:%d/%d/%d\nData do prazo%d/%d/%d\n",aux.id,aux.dono,aux.descricao,aux.prioridade,aux.seccao,aux.criacao.dia,aux.criacao.mes,aux.criacao.ano,aux.conclusao.dia,aux.conclusao.mes,aux.conclusao.ano,aux.prazo.dia,aux.prazo.mes,aux.prazo.ano);
+        fprintf(fp,"id:%s \nid do dono:%s \ndiscricao: %s \nprioridade:%d\nSeccao:%d\nData de criaÃ§ao:%d/%d/%d\nData de conclusao:%d/%d/%d\nData do prazo%d/%d/%d\n",aux.id,aux.dono,aux.descricao,aux.prioridade,aux.seccao,aux.criacao.dia,aux.criacao.mes,aux.criacao.ano,aux.conclusao.dia,aux.conclusao.mes,aux.conclusao.ano,aux.prazo.dia,aux.prazo.mes,aux.prazo.ano);
         l=l->next;
 }
     fprintf(fp,"-------------------------------------------\n");
@@ -1061,7 +1061,7 @@ void imprime_lista_pessoas_enderecos(List_pessoa lista)
     List_pessoa l = lista->next; /* Salta o header */
     while (l)
 {
-        printf("Endereço da pessoa %s e %d \n", l->pessoa.nome,&(*l));
+        printf("EndereÃ§o da pessoa %s e %d \n", l->pessoa.nome,&(*l));
         l=l->next;
 }
 }
@@ -1385,7 +1385,7 @@ void escreve_ficheiro_cartao(List_cartao cartoes){
     Cartao aux;
     FILE *fp;
     l=cartoes->next;
-    fp=fopen("Cartoes.txt","w");
+    fp=fopen("Dados/Cartoes.txt","w");
     while(l){
         aux=l->cartao;
         fprintf(fp,"%d\t%d\t%d/%d/%d\t%d/%d/%d\t%d/%d/%d\t%s\t%s\t%s\n",aux.prioridade,aux.seccao,aux.criacao.dia,aux.criacao.mes,aux.criacao.ano,aux.conclusao.dia,aux.conclusao.mes,aux.conclusao.ano,aux.prazo.dia,aux.prazo.mes,aux.prazo.ano,aux.id,aux.dono,aux.descricao);
@@ -1398,7 +1398,7 @@ void escreve_ficheiro_pessoa(List_pessoa pessoas){
     Pessoa aux;
     FILE *fp;
     l=pessoas->next;
-    fp=fopen("Pessoas.txt","w");
+    fp=fopen("Dados/Pessoas.txt","w");
     while(l){
         aux=l->pessoa;
         fprintf(fp,"%s\t%s\t%s\n",aux.id,aux.email,aux.nome);
